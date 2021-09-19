@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/************************* DETALLE DEL PRODUCTO *************************/
+
+.producto--contenedor {
+    margin: 25px 0px;
+}
+
+#producto--img {
+    width: 100%;
+}
+
+.producto--info__titulo {
+    font-weight: bold;
+}
+
+.producto--info__precio {
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+#agregarCarrito--boton {
+    background: #8C000E;
+    border-radius: 10px;
+    margin: 30px 0px 0px 0px;
+    outline: none;
+    border: none;
+    padding: 7px 10px;
+}
+
+.agregarComentario--contenedor {
+    margin: 25px 0px;
+}
+
+.producto--info__descripcion {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#btn_eliminar {
+    color:  #8C000E;
+    margin: 5px;
+}
+
+#btn_eliminar:hover {
+    cursor:pointer;
+}
+
+/****************************** COMENTARIOS ******************************/
+
+.comentarios--contenedor {
+    border: 1px solid gray;
+    border-radius: 15px;
+    margin: 25px 0px;
+    padding: 35px;
+}
+
+.comentario--img {
+    width: 70px;
+    border-radius: 50px;
+}
+
+#comentario--boton {
+    width: auto;
+    background: #8C000E;
+    border-radius: 10px;
+    margin: 15px 0px;
+    outline: none;
+    border: none;
+    padding: 5px 15px;
+}
+
+
+/****************************** RESPONSIVE ******************************/
+
+@media only screen and (max-width: 1050px) {
+    .categoria:first-child {
+        padding-left: 15px;
+    }
+    
+    .categoria {
+        padding: 0px 15px;
+    }
+
+    .menu--titulo {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    
+    .cabecera {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .logo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 15px 0px;
+    }
+
+    .opciones--menu {
+        justify-content: space-around;
+    }
+    
+    .menu--carrito__texto {
+        display: none;
+    }
+
+    .buscar {
+        padding-left: 15px;
+    }
+
+    .buscar--input {
+        width: 100%;
+        padding-left: 15px;
+    }
+
+    .menu {
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .menu--titulo {
+        width: 100%;
+        border: none;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .titulo {
+        margin: 10px 25px;
+    }
+
+    .menu--hidden {
+        display: none;
+    }
+
+    .categoria:first-child {
+        margin-left: 0px;
+        padding: 15px 0px;
+        border-top: 2px solid black;
+    }
+
+    .categoria {
+        border: 1px solid black;
+        width: 100%;
+        margin: 0px;
+        padding: 15px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+    }
+
+    .categoria:active {
+        background: white;
+    }
+
+    .seccion--titulo__texto {
+        font-size: 20px;
+        margin: 10px 5%;
+    }
+
+}

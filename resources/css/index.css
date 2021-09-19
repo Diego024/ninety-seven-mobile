@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0px;
+    box-sizing:border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cabecera {
+    background: #FBD1CF;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 85px;
+    width: 145px;
+    margin-left: 30px;
+}
+
+.opciones {
+    display: flex;
+    flex-direction: column;
+}
+
+.opciones--menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.opciones img {
+    width: 40px;
+    margin: 10px 10px
+}
+
+.menu--carrito__texto {
+    
+    font-weight: 500;
+    font-size: 18px;
+}
+
+#icono--usuario {
+    margin-right: 15px;
+}
+
+.usuario--contenedor:hover .usuario--opciones, .usuario--opciones:hover {
+    display:flex;
+    animation-name: slide;
+    animation-duration: 0.5s;
+}
+
+.usuario--opciones {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 5px 10px;
+    position: absolute;
+    right: 0px;
+    top: 50px;
+    background: white;
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: 2px solid #8C000E;
+    border-right: none;
+    display: none;
+}
+
+@keyframes slide {
+    from {
+        position: absolute;
+        right: -141.55px;
+        background: #8C000E;
+    }
+    to {
+        right: 0px;
+        background:white;
+    }
+}
+
+.usuario--contenedor__enlace {
+    text-decoration: none;
+    color: #53020a;
+    padding-right: 9px;
+    padding-left: 15px;
+}
+
+.usuario--contenedor__enlace:hover {
+    color: #53020a;
+}
+
+.opciones--buscar {
+    margin: 0px 15px 10px 0px;
+}
+
+.buscar {
+    display: flex;
+    flex-direction: row;
+}
+
+.buscar--input {
+    height: 35px;
+    background: white;
+    padding: 0px 10px;
+    margin-right: 3px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid #8C000E;
+    border-radius: 15px;
+}
+
+.buscar--button {
+    font-size: 15px;
+    background: white;
+    outline: none !important;
+    border: 1px solid #8C000E;
+    border-radius: 15px;
+    padding: 0px 15px;
+    color: black;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.buscar--button:hover {
+    text-decoration: none;
+}
+
+.buscar--button:hover {
+    background: #8C000E;
+    color: white;
+}
+
+/****************************** SEPARADOR ******************************/
+
+.separador {
+    background: #8C000E;
+    width: 100%;
+    height: 7px;
+}
+
+/****************************** CARTAS ******************************/
+
+#btn_card {
+    width: 100%;
+    background: #8C000E;
+}
+
+#btn_ver {
+    width: 95%;
+    background: #757575;
+}
+
+/****************************** MENU ******************************/
+
+.menu {
+    width: 100%;
+    background: white;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu--titulo {
+    border-right: 3px solid black;
+}
+
+.menu--titulo__texto{
+    font-weight: bold;
+    font-size: 23px;
+    padding: 10px 25px;
+}
+
+.menu--titulo__texto:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.categoria {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 15px;
+    outline: none;
+}
+
+.categoria:hover{
+    color:#8C000E;
+    text-decoration: underline;
+}
+
+.categoria:first-child {
+    padding-left: 30px;
+}
+
+.categoria__selected {
+    color:#8C000E !important;
+    text-decoration: underline !important;
+}
+
+/************************* TITULO DE LA SECCION **************************/
+
+.seccion--titulo {
+    width: 90%;
+    margin: 0px 5%;
+    border-bottom: 1px solid black;
+}
+
+.seccion--titulo__texto {
+    margin-bottom: 0px;
+    margin-left: 10px;
+    width:max-content ;
+    border-bottom: 3px solid #8C000E;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/****************************** FOOTER ******************************/
+
+.pie {
+    background: #FBD1CF;
+    width: 100%;
+}
+
+/****************************** RESPONSIVE ******************************/
+
+@media only screen and (max-width: 1050px) {
+    .categoria:first-child {
+        padding-left: 15px;
+    }
+    
+    .categoria {
+        padding: 0px 15px;
+    }
+
+    .menu--titulo {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    
+    .cabecera {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .logo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 15px 0px;
+    }
+
+    .opciones--menu {
+        justify-content: space-around;
+    }
+    
+    .menu--carrito__texto {
+        display: none;
+    }
+
+    .buscar {
+        padding-left: 15px;
+    }
+
+    .buscar--input {
+        width: 100%;
+        padding-left: 15px;
+    }
+
+    .menu {
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .menu--titulo {
+        width: 100%;
+        border: none;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .titulo {
+        margin: 10px 25px;
+    }
+
+    .menu--hidden {
+        display: none;
+    }
+
+    .categoria:first-child {
+        margin-left: 0px;
+        padding: 15px 0px;
+        border-top: 2px solid black;
+    }
+
+    .categoria {
+        border: 1px solid black;
+        width: 100%;
+        margin: 0px;
+        padding: 15px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+    }
+
+    .categoria:active {
+        background: white;
+    }
+
+    .seccion--titulo__texto {
+        font-size: 20px;
+    }
+
+    .usuario--opciones {
+        right: 0px;
+        top: 135px;
+        font-size: 18px;
+    }
+
+    .pie {
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0px;
+    box-sizing:border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+#btn_eliminar {
+    color:  #8C000E;
+    margin: 50px;
+}
+
+#btn_eliminar:hover {
+    cursor:pointer;
+}

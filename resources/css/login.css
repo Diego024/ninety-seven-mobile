@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0px;
+    box-sizing:border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+#jumbo-SignIn {
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/back_our/20190617/ourmid/pngtree-pink-simple-fashion-women-s-clothing-store-home-background-image_129128.jpg);
+    background-color: rgb(100,100,100);
+    background-blend-mode: soft-light;
+    text-align: center;
+    color: #ffffff;
+}
+
+#frm_inicio {
+    border: 2px solid rgba(110, 110, 110, 0.548);
+    border-radius: 5px;
+    background: rgba(255, 200, 200, 0.5);
+}
+
+#cuerpo {
+    background:#ffffff;
+}

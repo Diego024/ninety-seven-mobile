@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/************************ TITULO DE LA SECCION ************************/
+
+.seccion--titulo {
+    width: 90%;
+    margin: 20px 5%;
+    border-bottom: 1px solid black;
+}
+
+.seccion--titulo__texto {
+    margin-bottom: 0px;
+    margin-left: 10px;
+    width:max-content ;
+    border-bottom: 3px solid #8C000E;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/************************ PRODUCTO DEL CARRITO **************************/
+
+.producto--img {
+    width: 80%;
+    padding: 10px;
+}
+
+.carta--contenedor__titulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card--titulo {
+    color: black;
+}
+
+.carrito--enlace__contenedor {
+    margin-top: 20px;
+}
+
+.carrito--enlace {
+    color: rgb(201, 0, 0);
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+
+.carrito--enlace:hover {
+    color: rgb(201, 0, 0);
+}
+
+/************************ FINALIZAR PEDIDO **************************/
+
+#finalizarPedido--contenedor {
+    background: #FBD1CF;
+    border-radius: 15px;
+    border: 1px solid #8C000E;
+    margin: 0px 15px;
+}
+
+.finalizarPedido--texto {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.finalizarPedido--texto:first-child {
+    margin-top: 25px;
+}
+
+.finalizarPedido--opcionRegalo {
+    margin-top: 10px;
+}
+
+#finalizarPedido--boton {
+    width: 95%;
+    background: #8C000E;
+    border-radius: 10px;
+    margin: 15px 0px;
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+
+#modal--btn {
+    background: #8C000E;
+    border: none;
+}
+
+/************************ RECOMENDACIONES **************************/
+#recomendaciones--contenedor {
+    background: #F1F1F1;
+    margin: 10px 15px 0px;
+    border-radius: 15px;
+    border: 1px solid rgb(71, 71, 71);
+}
+
+.recomendaciones--texto {
+    text-align: center;
+    font-size: 20px;
+    padding: 10px 0px;
+}
+
+.recomendaciones--contenedor__img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recomendaciones--img {
+    width: 70%;
+}
+
+.recomendaciones--producto__titulo {
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.recomendaciones--producto__titulo:hover {
+    color: black;
+}
+
+.recomendaciones--producto__precio {
+    text-align: center;
+}
+
+/****************************** RESPONSIVE ******************************/
+
+@media only screen and (max-width: 1050px) {
+    .categoria:first-child {
+        padding-left: 15px;
+    }
+    
+    .categoria {
+        padding: 0px 15px;
+    }
+
+    .menu--titulo {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    
+    .cabecera {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .logo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 15px 0px;
+    }
+
+    .opciones--menu {
+        justify-content: space-around;
+    }
+    
+    .menu--carrito__texto {
+        display: none;
+    }
+
+    .buscar {
+        padding-left: 15px;
+    }
+
+    .buscar--input {
+        width: 100%;
+        padding-left: 15px;
+    }
+
+    .menu {
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .menu--titulo {
+        width: 100%;
+        border: none;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .titulo {
+        margin: 10px 25px;
+    }
+
+    .menu--hidden {
+        display: none;
+    }
+
+    .categoria:first-child {
+        margin-left: 0px;
+        padding: 15px 0px;
+        border-top: 2px solid black;
+    }
+
+    .categoria {
+        border: 1px solid black;
+        width: 100%;
+        margin: 0px;
+        padding: 15px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+    }
+
+    .categoria:active {
+        background: white;
+    }
+
+    .seccion--titulo__texto {
+        font-size: 20px;
+        margin: 10px 5%;
+    }
+
+}

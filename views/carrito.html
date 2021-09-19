@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+    <!-- Style -->
+    <link rel="stylesheet" href="../resources/css/index.css">
+    <link rel="stylesheet" href="../resources/css/carrito.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+
+<body>
+    <!--INICIO DEL HEADER Y NAV-->
+    <header class="cabecera">
+        <div class="logo">
+            <a href="index.html"><img src="../resources/img/logo-ready.png" alt=""></a>
+        </div>
+        <div class="opciones">
+            <div class="opciones--menu">
+                <span class="menu--carrito__texto">
+                    Carrito
+                </span>
+
+                <a href="carrito.html"><img src="../resources/icons/carrito.png" alt=""></a>
+                <a href="favoritos.html"><img src="../resources/icons/favoritos.png" alt=""></a>
+
+                <div class="usuario--contenedor">
+                    <img src="../resources/icons/usuarios.png" id="icono--usuario" alt="">
+                    <div class="usuario--opciones">
+                        <a href="register.html" class="usuario--contenedor__enlace">Crear cuenta</a>
+                        <a href="login.html" class="usuario--contenedor__enlace">Iniciar sesión</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="opciones--buscar">
+                <form action="" class="buscar">
+                    <input type="search" class="buscar--input" id="input-search" placeholder="Buscar" size="45"
+                        spellcheck="true">
+                    <a href="#" onclick="setSearchLink()" id="input-button" class="buscar--button">Buscar</a>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- SEPARADOR -->
+    <div class="separador"></div>
+
+    <!-- Public_Page::navbarTemplate(''); -->
+    <nav class="menu sticky-top">
+        <div class="menu--titulo">
+            <a href="#" class="menu--titulo__texto">CATEGORIAS</a>
+        </div>
+        <div class="menu--categorias menu--hidden" id="categories">
+            <a href="#" class="categoria">Vestidos</a>
+            <a href="#" class="categoria">Camisas</a>
+            <a href="#" class="categoria">Pantalones</a>
+            <a href="#" class="categoria">Accesorios</a>
+            <a href="#" class="categoria">Lencería</a>
+            <a href="#" class="categoria">Trajes de baño</a>
+            <a href="#" class="categoria">Hogareña</a>
+        </div>
+    </nav>
+    <!--FIN DEL HEADER Y NAV-->
+
+    <!-- TITULO DE LA SECION -->
+    <div class="seccion--titulo">
+        <h4 class="seccion--titulo__texto">MIS ARTÍCULOS</h3>
+    </div>
+
+    <!-- PRODUCTO DEL CARRITO -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9" id="carrito-container">
+                <div class="card mb-3" style="max-width: 100%;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="../resources/img/blusa_dorada.jpeg" alt="..." class="producto--img" >
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <div class="carta--contenedor__titulo">
+                                    <a href="producto.html"><h5 class="card-title card--titulo">Blusa Dorada</h5></a>
+                                    <p>$49.99</p>
+                                </div>
+                                
+                                <div class="form-group col-md-4">
+                                    <label for="inputState">Cantidad: </label>
+                                    <input class="w-75" name="cantidad" id="cantidad" value="${row.cantidad}" type="number" readonly>
+
+                                    <div class="carrito--enlace__contenedor">
+                                        <a class="carrito--enlace"><p>Eliminar producto</p></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3" style="max-width: 100%;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="../resources/img/blusa_dorada.jpeg" alt="..." class="producto--img" >
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <div class="carta--contenedor__titulo">
+                                    <a href="producto.html"><h5 class="card-title card--titulo">Blusa Dorada</h5></a>
+                                    <p>$49.99</p>
+                                </div>
+                                
+                                <div class="form-group col-md-4">
+                                    <label for="inputState">Cantidad: </label>
+                                    <input class="w-75" name="cantidad" id="cantidad" value="${row.cantidad}" type="number" readonly>
+
+                                    <div class="carrito--enlace__contenedor">
+                                        <a class="carrito--enlace"><p>Eliminar producto</p></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3" style="max-width: 100%;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="../resources/img/blusa_dorada.jpeg" alt="..." class="producto--img" >
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <div class="carta--contenedor__titulo">
+                                    <a href="producto.html"><h5 class="card-title card--titulo">Blusa Dorada</h5></a>
+                                    <p>$49.99</p>
+                                </div>
+                                
+                                <div class="form-group col-md-4">
+                                    <label for="inputState">Cantidad: </label>
+                                    <input class="w-75" name="cantidad" id="cantidad" value="${row.cantidad}" type="number" readonly>
+
+                                    <div class="carrito--enlace__contenedor">
+                                        <a class="carrito--enlace"><p>Eliminar producto</p></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3" style="max-width: 100%;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="../resources/img/blusa_dorada.jpeg" alt="..." class="producto--img" >
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <div class="carta--contenedor__titulo">
+                                    <a href="producto.html"><h5 class="card-title card--titulo">Blusa Dorada</h5></a>
+                                    <p>$49.99</p>
+                                </div>
+                                
+                                <div class="form-group col-md-4">
+                                    <label for="inputState">Cantidad: </label>
+                                    <input class="w-75" name="cantidad" id="cantidad" value="${row.cantidad}" type="number" readonly>
+
+                                    <div class="carrito--enlace__contenedor">
+                                        <a class="carrito--enlace"><p>Eliminar producto</p></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="row">
+                    <div class="col-sm-12" id="finalizarPedido--contenedor" style="background: #FBD1CF;">
+                        <h4 class="finalizarPedido--texto" id="quantity-products">4 Productos</h4>
+                        <h4 class="finalizarPedido--texto" id="total">$199.96</h4>                   
+                        <div class="row">
+                            <div class="col">
+                                <button onclick=openCreateDialog() class="bbtn btn-dark" id="finalizarPedido--boton" data-toggle="modal" data-target="#confirmarPedido">
+                                    Realizar pedido
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="modal-title">Confirmación de pedido</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                <form method="post" id="save-form" enctype="multipart/form-data">
+                    <!-- COMENTARIO Y ORDEN_REGALO -->
+                    <div class="form-row">
+                        <div class="form-group col-sm-12">
+                            <label for="comentario">Comentario sobre el pedido</label>
+                            <textarea class="form-control" id="comentario" name="comentario" rows="3"></textarea>
+                        </div>
+        
+                        <div class="form-group col-sm-12 ml-4">
+                            <input class="form-check-input" type="checkbox" name="orden_regalo" value="true">
+                            <label class="form-check-label" for="inlineCheckbox1">Este pedido es un regalo</label>
+                        </div>
+                    </div>
+                    <!-- BOTONES DEL FORM -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Confirmar</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+      </div>
+    
+    <div class="separador mt-4"></div>
+
+        <!--INICIO DEL FOOTER-->
+        <footer class="pie">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-2">
+                        <br>
+                        <a href="FAQ.php" class="text-dark">
+                            <p>Preguntas frecuentes</p>
+                        </a>
+                    </div>
+                    <div class="col-sm-12 col-lg-2">
+                        <br>
+                        <a href="SobreNosotros.php" class="text-dark">
+                            <p>Sobre Nosotros</p>
+                        </a>
+                    </div>
+                    <div class="col-sm-12 col-lg-3">
+                        <br>
+                        <p><a href="https://www.instagram.com/ninety_sevenheart/" class="text-dark"><img
+                                    src="../resources/img/instagram_logo.png"> @ninety-sevenheart</p></a>
+                    </div>
+                    <div class="col-sm-12 col-lg-3">
+                        <br>
+                        <p><img src="../resources/img/facebook.png"> Ninety-Seven Heart</p>
+                    </div>
+                    <div class="col-sm-12 col-lg-2">
+                        <br>
+                        <p><img src="../resources/img/whatsapp.png">2222-2222</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <p>Derechos reservados - Ninety-Seven Heart 2021</p>
+                </div>
+            </div>
+        </footer>
+        <!-- Controller -->
+        <!-- <script src="../../app/controllers/public/'.$controller.'.js"></script> -->
+        <!-- <script src="../../app/helpers/components.js"></script> -->
+        <script src="../controller/navBar.js"></script>
+        <!-- <script src="../../app/controllers/public/account.js"></script> -->
+        <!-- Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"></script>
+        <!-- LINKS DE SWEET ALERT -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </body>
+    
+    </html>

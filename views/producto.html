@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+    <!-- Style -->
+    <link rel="stylesheet" href="../resources/css/index.css">
+    <link rel="stylesheet" href="../resources/css/producto.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+
+<body>
+    <!--INICIO DEL HEADER Y NAV-->
+    <header class="cabecera">
+        <div class="logo">
+            <a href="index.html"><img src="../resources/img/logo-ready.png" alt=""></a>
+        </div>
+        <div class="opciones">
+            <div class="opciones--menu">
+                <span class="menu--carrito__texto">
+                    Carrito
+                </span>
+
+                <a href="carrito.html"><img src="../resources/icons/carrito.png" alt=""></a>
+                <a href="favoritos.html"><img src="../resources/icons/favoritos.png" alt=""></a>
+
+                <div class="usuario--contenedor">
+                    <img src="../resources/icons/usuarios.png" id="icono--usuario" alt="">
+                    <div class="usuario--opciones">
+                        <a href="register.html" class="usuario--contenedor__enlace">Crear cuenta</a>
+                        <a href="login.html" class="usuario--contenedor__enlace">Iniciar sesión</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="opciones--buscar">
+                <form action="" class="buscar">
+                    <input type="search" class="buscar--input" id="input-search" placeholder="Buscar" size="45"
+                        spellcheck="true">
+                    <a href="#" onclick="setSearchLink()" id="input-button" class="buscar--button">Buscar</a>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- SEPARADOR -->
+    <div class="separador"></div>
+
+    <!-- Public_Page::navbarTemplate(''); -->
+    <nav class="menu sticky-top">
+        <div class="menu--titulo">
+            <a href="#" class="menu--titulo__texto">CATEGORIAS</a>
+        </div>
+        <div class="menu--categorias menu--hidden" id="categories">
+            <a href="#" class="categoria">Vestidos</a>
+            <a href="#" class="categoria">Camisas</a>
+            <a href="#" class="categoria">Pantalones</a>
+            <a href="#" class="categoria">Accesorios</a>
+            <a href="#" class="categoria">Lencería</a>
+            <a href="#" class="categoria">Trajes de baño</a>
+            <a href="#" class="categoria">Hogareña</a>
+        </div>
+    </nav>
+    <!--FIN DEL HEADER Y NAV-->
+
+    <div class="container producto--contenedor mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="../resources/img/blusa_dorada.jpeg" class="img-fluid" id="producto--img" alt="...">
+            </div>
+            <div class="col-lg-8">
+                <h3 class="producto--info__titulo" id="catalogo_producto">
+
+                </h3>
+                <h3 class="producto--info__precio mt-4" id="precio">
+
+                </h3>
+
+                <form method="post" id="carrito-form" class="my-2 my-lg-0">
+                    <div>
+                        <!-- Campo invicible del ID del producto -->
+                        <input class="d-none" type="number" id="id_producto-carrito" name="id_catalogo_producto">
+
+                        <label for="inputState">Cantidad: </label>
+                        <input name="cantidad" id="cantidad" type="number" min="1" max="4">
+                    </div>
+
+                    <div>
+                        <button type="submit" class="bbtn btn-dark rounded mb-2" id="agregarCarrito--boton">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </form>
+
+                <a onclick=crearFavorito() id="btn_eliminar"><b>Agregar a favoritos</b></a>
+
+                <h3 class="producto--info__descripcion mt-4" style="margin-top: 25px;">
+                    Descripción:
+                </h3>
+
+                <p id='producto-descripcion'></p>
+
+            </div>
+            <div class="col comentarios--contenedor mt-4">
+
+                <form method="post" id="comment-form" class="my-2 my-lg-0">
+                    <!-- Campo invicible del ID del producto -->
+                    <input class="d-none" type="number" id="id_catalogo_producto" name="id_catalogo_producto">
+
+                    <label for="comentario">Nuevo comentario:</label>
+                    <textarea class="form-control" id="comentario" name="comentario" rows="3"></textarea>
+
+                    <div class="form-row mt-2 w-25">
+                        <label for="valoracion">Valoración:</label>
+                        <input name="valoracion" step="any" class="form-control" id="valoracion" type="number" min="1"
+                            max="10">
+                    </div>
+
+                    <button type="submit" id="comentario--boton" class="bbtn btn-dark mt-4 rounded">
+                        Guardar comentario
+                    </button>
+                </form>
+
+                <div class="container mb-4 mt-4">
+                    <div class="row" id="comments-container">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEPARADOR -->
+    <div class="separador"></div>
+
+    <!-- Public_Page::navbarTemplate(''); -->
+    <nav class="menu sticky-top">
+        <div class="menu--titulo">
+            <a href="#" class="menu--titulo__texto">CATEGORIAS</a>
+        </div>
+        <div class="menu--categorias menu--hidden" id="categories">
+            <a href="#" class="categoria">Vestidos</a>
+            <a href="#" class="categoria">Camisas</a>
+            <a href="#" class="categoria">Pantalones</a>
+            <a href="#" class="categoria">Accesorios</a>
+            <a href="#" class="categoria">Lencería</a>
+            <a href="#" class="categoria">Trajes de baño</a>
+            <a href="#" class="categoria">Hogareña</a>
+        </div>
+    </nav>
+    <!--FIN DEL HEADER Y NAV-->
+
+    <!--INICIO CARRUSEL-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <!-- RESOLUCIÓN DE LAS IMAGENES DEL CAROUSEL  1850X700 -->
+            <div class="carousel-item active">
+                <img src="https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-clothing-girl-fashion-snatch-image_17004.jpg"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://png.pngtree.com/thumb_back/fw800/background/20190222/ourmid/pngtree-tanabata-jewelry-jewelry-banner-poster-background-jewelryfashion-accessoriesmothers-dayvalentines-image_60077.jpg"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://png.pngtree.com/thumb_back/fw800/background/20190222/ourmid/pngtree-creative-minimalist-fashion-banner-background-backgroundcosmetic-backgroundpinkfashion-image_58373.jpg"
+                    class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <br>
+
+    <!-- TITULO DE LA SECION -->
+    <div class="seccion--titulo">
+        <h4 class="seccion--titulo__texto">NOVEDADES</h3>
+    </div>
+    <!-- NOVEDADES -->
+    <br>
+    <div class="container d-flex flex-row justify-content-center">
+        <div class="row" id="novedades">
+            <div class="col mb-4">
+                <div class="card text-center" style="width: 20rem;">
+                    <a href="Producto.html">
+                        <img src="../resources/img/blusa_dorada.jpeg" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <a href="Producto.php?id=${row.id_catalogo_producto}">
+                            <h5 class="card-title">Blusa Dorada</h5>
+                        </a>
+                        <p class="card-text">$49.99</p>
+                        <!-- <a href="#" class="btn btn-danger" id="btn_card">Añadir al carrito</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card text-center" style="width: 20rem;">
+                    <a href="Producto.html">
+                        <img src="../resources/img/blusa_dorada.jpeg" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <a href="Producto.php?id=${row.id_catalogo_producto}">
+                            <h5 class="card-title">Blusa Dorada</h5>
+                        </a>
+                        <p class="card-text">$49.99</p>
+                        <!-- <a href="#" class="btn btn-danger" id="btn_card">Añadir al carrito</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card text-center" style="width: 20rem;">
+                    <a href="Producto.html">
+                        <img src="../resources/img/blusa_dorada.jpeg" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <a href="Producto.php?id=${row.id_catalogo_producto}">
+                            <h5 class="card-title">Blusa Dorada</h5>
+                        </a>
+                        <p class="card-text">$49.99</p>
+                        <!-- <a href="#" class="btn btn-danger" id="btn_card">Añadir al carrito</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card text-center" style="width: 20rem;">
+                    <a href="Producto.html">
+                        <img src="../resources/img/blusa_dorada.jpeg" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <a href="Producto.php?id=${row.id_catalogo_producto}">
+                            <h5 class="card-title">Blusa Dorada</h5>
+                        </a>
+                        <p class="card-text">$49.99</p>
+                        <!-- <a href="#" class="btn btn-danger" id="btn_card">Añadir al carrito</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card text-center" style="width: 20rem;">
+                    <a href="Producto.html">
+                        <img src="../resources/img/blusa_dorada.jpeg" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <a href="Producto.php?id=${row.id_catalogo_producto}">
+                            <h5 class="card-title">Blusa Dorada</h5>
+                        </a>
+                        <p class="card-text">$49.99</p>
+                        <!-- <a href="#" class="btn btn-danger" id="btn_card">Añadir al carrito</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card text-center" style="width: 20rem;">
+                    <a href="Producto.html">
+                        <img src="../resources/img/blusa_dorada.jpeg" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <a href="Producto.php?id=${row.id_catalogo_producto}">
+                            <h5 class="card-title">Blusa Dorada</h5>
+                        </a>
+                        <p class="card-text">$49.99</p>
+                        <!-- <a href="#" class="btn btn-danger" id="btn_card">Añadir al carrito</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <br>
+
+    <div class="separador"></div>
+
+    <!--INICIO DEL FOOTER-->
+    <footer class="pie">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-2">
+                    <br>
+                    <a href="FAQ.php" class="text-dark">
+                        <p>Preguntas frecuentes</p>
+                    </a>
+                </div>
+                <div class="col-sm-12 col-lg-2">
+                    <br>
+                    <a href="SobreNosotros.php" class="text-dark">
+                        <p>Sobre Nosotros</p>
+                    </a>
+                </div>
+                <div class="col-sm-12 col-lg-3">
+                    <br>
+                    <p><a href="https://www.instagram.com/ninety_sevenheart/" class="text-dark"><img
+                                src="../resources/img/instagram_logo.png"> @ninety-sevenheart</p></a>
+                </div>
+                <div class="col-sm-12 col-lg-3">
+                    <br>
+                    <p><img src="../resources/img/facebook.png"> Ninety-Seven Heart</p>
+                </div>
+                <div class="col-sm-12 col-lg-2">
+                    <br>
+                    <p><img src="../resources/img/whatsapp.png">2222-2222</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <p>Derechos reservados - Ninety-Seven Heart 2021</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Controller -->
+    <!-- <script src="../../app/controllers/public/'.$controller.'.js"></script> -->
+    <!-- <script src="../../app/helpers/components.js"></script> -->
+    <script src="../controller/navBar.js"></script>
+    <!-- <script src="../../app/controllers/public/account.js"></script> -->
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <!-- LINKS DE SWEET ALERT -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>
