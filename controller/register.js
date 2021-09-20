@@ -47,11 +47,11 @@ document.getElementById('register-form').addEventListener('submit', function (ev
             request.json().then(function (response) {
                 // Se comprueba si la respuesta es satisfactoria, de lo contrario se muestra un mensaje con la excepción.
                 if (response.status) {
-                    sweetAlert(1, response.message, 'signin.php');
+                    sweetAlert(1, response.message, 'signin.html');
                 } else {
                     // Se verifica si el token falló (ya sea por tiempo o por uso).
                     if (response.recaptcha) {
-                        sweetAlert(2, response.exception, 'index.php');
+                        sweetAlert(2, response.exception, 'index.html');
                     } else {
                         sweetAlert(2, response.exception, null);
                         // Se genera un nuevo token.

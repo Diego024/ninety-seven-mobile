@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido</title>
+    <title>Historial de compra</title>
     <!-- Style -->
     <link rel="stylesheet" href="../resources/css/index.css">
-    <link rel="stylesheet" href="../resources/css/carrito.css">
+    <link rel="stylesheet" href="../resources/css/favoritos.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -48,6 +48,7 @@
         </div>
     </header>
 
+    <!-- SEPARADOR -->
     <div class="separador"></div>
 
     <!-- Public_Page::navbarTemplate(''); -->
@@ -56,73 +57,37 @@
             <a href="#" class="menu--titulo__texto">CATEGORIAS</a>
         </div>
         <div class="menu--categorias menu--hidden" id="categories">
-
+            <a href="#" class="categoria">Vestidos</a>
+            <a href="#" class="categoria">Camisas</a>
+            <a href="#" class="categoria">Pantalones</a>
+            <a href="#" class="categoria">Accesorios</a>
+            <a href="#" class="categoria">Lencería</a>
+            <a href="#" class="categoria">Trajes de baño</a>
+            <a href="#" class="categoria">Hogareña</a>
         </div>
     </nav>
     <!--FIN DEL HEADER Y NAV-->
 
+    <br>
+
     <!-- TITULO DE LA SECION -->
-    <div class="seccion--titulo my-4">
-        <h4 class="seccion--titulo__texto">MIS ARTÍCULOS</h3>
+    <div class="seccion--titulo">
+        <h4 class="seccion--titulo__texto">Historial de compras</h3>
     </div>
 
-    <!-- PRODUCTO DEL CARRITO -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-9" id="carrito-container">
-            </div>
-            <div class="col-sm-3">
-                <div class="row">
-                    <div class="col-sm-12" id="finalizarPedido--contenedor" style="background: #FBD1CF;">
-                        <h4 class="finalizarPedido--texto" id="quantity-products"></h4>
-                        <h4 class="finalizarPedido--texto" id="total"></h4>
-                        <div class="row">
-                            <div class="col">
-                                <button onclick=openCreateDialog() class="bbtn btn-dark" id="finalizarPedido--boton"
-                                    data-toggle="modal" data-target="#confirmarPedido">
-                                    Realizar pedido
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- COMIENZO DE LA TABLA PEDIDOS-->
+    <div class="container" id="table-container">
+        <h4 id="warning-message" style="text-align:center"></h4>
+        <table class="table table-striped table-bordered mydatatable" id="historial">
+        </table>
     </div>
+    <br>
 
-    <!-- MODAL DEL FORM -->
-    <div class="modal fade" id="modal-form" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-md">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modal-title">Confirmación de pedido</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form method="post" id="save-form" enctype="multipart/form-data">
-                        <!-- COMENTARIO Y ORDEN_REGALO -->
-                        <div class="form-row">
-                            <div class="form-group col-sm-12">
-                                <label for="comentario">Comentario sobre el pedido</label>
-                                <textarea class="form-control" id="comentario" name="comentario" rows="3"></textarea>
-                            </div>
-
-                            <div class="form-group col-sm-12 ml-4">
-                                <input class="form-check-input" type="checkbox" name="orden_regalo" value="true">
-                                <label class="form-check-label" for="inlineCheckbox1">Este pedido es un regalo</label>
-                            </div>
-                        </div>
-                        <!-- BOTONES DEL FORM -->
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                            <button type="submit" class="btn btn-primary">Confirmar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+    <!-- COMIENZO DE LA TABLA DETALLE-->
+    <div class="container" id="table-detalle">
+        <h4 id="warning-message" style="text-align:center"></h4>
+        <table class="table table-striped table-bordered mydatatable" id="tb_detalle">
+        </table>
     </div>
 
     <div class="separador mt-4"></div>
@@ -133,13 +98,13 @@
             <div class="row">
                 <div class="col-sm-12 col-lg-2">
                     <br>
-                    <a href="FAQ.php" class="text-dark">
+                    <a href="FAQ.html" class="text-dark">
                         <p>Preguntas frecuentes</p>
                     </a>
                 </div>
                 <div class="col-sm-12 col-lg-2">
                     <br>
-                    <a href="SobreNosotros.php" class="text-dark">
+                    <a href="info.html" class="text-dark">
                         <p>Sobre Nosotros</p>
                     </a>
                 </div>
@@ -163,8 +128,9 @@
         </div>
     </footer>
     <!-- Controller -->
+    <!-- <script src="../../app/controllers/public/'.$controller.'.js"></script> -->
+    <!-- <script src="../../app/helpers/components.js"></script> -->
     <script src="../controller/navBar.js"></script>
-    <script src="../controller/carrito.js"></script>
     <script src="../controller/components.js"></script>
     <!-- <script src="../../app/controllers/public/account.js"></script> -->
     <!-- Bootstrap -->
