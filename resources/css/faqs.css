@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0px;
+    box-sizing:border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+#jumbo {
+    background-image: url(https://goliquidator.com/wp-content/uploads/2019/09/FAQ-banner-1.jpg);
+    background-color: rgb(100,100,100);
+    background-blend-mode: soft-light;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+#headingOne {
+    background: #FBD1CF;
+    width: 100%;
+    border: 1px solid black;
+    
+}
+
+#headingTwo {
+    background: #FBD1CF;
+    width: 100%;
+    border: 1px solid black;
+}
+
+#headingThree {
+    background: #FBD1CF;
+    width: 100%;
+    border: 1px solid black;
+}
+
+#headingFour {
+    background: #FBD1CF;
+    width: 100%;
+    border: 1px solid black;
+}
+
+#headingFive {
+    background: #FBD1CF;
+    width: 100%;
+    border: 1px solid black;
+}
+
+#headingSix {
+    background: #FBD1CF;
+    width: 100%;
+    border: 1px solid black;
+}

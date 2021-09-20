@@ -5,17 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de sesión</title>
+    <title>Sobre Nosotros</title>
     <!-- Style -->
     <link rel="stylesheet" href="../resources/css/index.css">
-    <link rel="stylesheet" href="../resources/css/login.css">
+    <link rel="stylesheet" href="../resources/css/info.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 
 <body>
-
     <!--INICIO DEL HEADER Y NAV-->
     <header class="cabecera">
         <div class="logo">
@@ -49,56 +48,68 @@
         </div>
     </header>
 
+    <!-- SEPARADOR -->
     <div class="separador"></div>
-    <br>
+
     <!--JUMBOTRON-->
     <div class="container-fluid">
         <div class="row">
             <div class="col">
-                <div class="jumbotron jumbotron-fluid" id="jumbo-SignIn">
+                <div class="jumbotron jumbotron-fluid" id="jumbo-Nosotros">
                     <div class="container">
-                        <h1 class="display-4">Inicio de sesión</h1>
-                        <p class="lead">Al iniciar sesión con nosotros obtendrás una mejor experiencia al momento de
-                            realizar tus compras.</p>
+                        <h1 class="display-4">Sobre Nosotros</h1>
+                        <p class="lead">Tú decides tu estilo.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <br>
-    <!--INICIO DE FORM-->
-    <div class="container">
+    <div class="container-fluid" id="sobre">
         <div class="row justify-content-center">
-            <div class="col-sm-6" id="frm_inicio">
-                <form method="post" id="session-form">
-                    <br>
-                    <div class="form-group row">
-                        <label for="usuario" class="col-sm-2 col-form-label">Correo electrónico:</label>
-                        <div class="col">
-                            <input type="email" class="form-control" id="usuario" name="usuario">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="inputPassword3" class="col-sm-2 col-form-label">Contraseña:</label>
-                        <div class="col">
-                            <input type="password" class="form-control" id="clave" name="clave">
-                        </div>
-                    </div>
-                    <div class="form-group row justify-content-center">
-                        <div class="col-xs-5">
-                            ¿Aún no tienes una cuenta? <a href="register.html">¡Regístrate ahora!</a>
-                        </div>
-                    </div>
-                    <div class="form-group row justify-content-center">
-                        <div class="col-xs-5">
-                            <button type="submit" class="btn btn-danger" id="btn_card" href="Prueba.php">Iniciar
-                                sesión</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+            <h2>Ninety-Seven Hearts</h2>
         </div>
-
+    </div>
+    <br>
+    <div class="container mt-4">
+        <div class="row justify-content-center" id="titulo">
+            <h2> <b> ¿Quiénes somos?</b></h2>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <p>Somos una tienda especializada en crear y diseñar tu estilo en base a las maravillosas, modernas y
+                cómodas prendas que tenemos disponibles a la venta. </p>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row justify-content-center" id="titulo">
+            <h2> <b>Misión</b></h2>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <p>Ofrecer a nuestros clientes productos de calidad, a precios cómodos que cumplan con sus necesidades y
+                exigencias, abarcando sus gustos de acuerdo a su estilo de ver y vivir la vida.</p>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row justify-content-center" id="titulo">
+            <h2> <b>Visión</b></h2>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <p>Ser una empresa líder y reconocida en la venta de ropa, lograr también extendernos y crear nuestras
+                cadenas de almacenes, proporcionando cada día más un servicio de excelencia a nuestros clientes y que al
+                mismo tiempo nos permitan competir en el mercado nacional con los mejores precios del mercado.</p>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row justify-content-center" id="titulo">
+            <h2> <b>Objetivos</b></h2>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <p>Ofrecer ropa de mejor calidad satisfaga las necesidades y gustos del mercado potencial, vender ropa a la
+                moda que cumpla con los requerimientos de estilo en el segmento del mercado.</p>
+        </div>
     </div>
     <br>
     <div class="separador"></div>
@@ -140,8 +151,7 @@
     </footer>
     <!-- Controller -->
     <!-- <script src="../../app/controllers/public/'.$controller.'.js"></script> -->
-    <!-- <script src="../../app/helpers/components.js"></script> -->
-    <script src="../controller/login.js"></script>
+    <!-- <script src="../controller/faqs.js"></script> -->
     <script src="../controller/navBar.js"></script>
     <!-- <script src="../../app/controllers/public/account.js"></script> -->
     <!-- Bootstrap -->
