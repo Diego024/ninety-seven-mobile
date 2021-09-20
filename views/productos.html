@@ -61,72 +61,26 @@
     </nav>
     <!--FIN DEL HEADER Y NAV-->
 
-    <div class="container producto--contenedor mt-4">
+    <!--JUMBOTRON-->
+    <div class="container-fluid mt-4">
         <div class="row">
-            <div class="col-md-4">
-                <img src="" class="img-fluid" id="producto--img" alt="...">
-            </div>
-            <div class="col-lg-8">
-                <h3 class="producto--info__titulo" id="catalogo_producto">
-
-                </h3>
-                <h3 class="producto--info__precio mt-4" id="precio">
-
-                </h3>
-
-                <form method="post" id="carrito-form" class="my-2 my-lg-0">
-                    <div>
-                        <!-- Campo invicible del ID del producto -->
-                        <input class="d-none" type="number" id="id_producto-carrito" name="id_catalogo_producto">
-
-                        <label for="inputState">Cantidad: </label>
-                        <input name="cantidad" id="cantidad" type="number" min="1" max="4">
-                    </div>
-
-                    <div>
-                        <button type="submit" class="bbtn btn-dark rounded mb-2" id="agregarCarrito--boton">
-                            Agregar al carrito
-                        </button>
-                    </div>
-                </form>
-
-                <a onclick=crearFavorito() id="btn_eliminar"><b>Agregar a favoritos</b></a>
-
-                <h3 class="producto--info__descripcion mt-4" style="margin-top: 25px;">
-                    Descripción:
-                </h3>
-
-                <p id='producto-descripcion'></p>
-
-            </div>
-            <div class="col comentarios--contenedor mt-4">
-
-                <form method="post" id="comment-form" class="my-2 my-lg-0">
-                    <!-- Campo invicible del ID del producto -->
-                    <input class="d-none" type="number" id="id_catalogo_producto" name="id_catalogo_producto">
-
-                    <label for="comentario">Nuevo comentario:</label>
-                    <textarea class="form-control" id="comentario" name="comentario" rows="3"></textarea>
-
-                    <div class="form-row mt-2 w-25">
-                        <label for="valoracion">Valoración:</label>
-                        <input name="valoracion" step="any" class="form-control" id="valoracion" type="number" min="1"
-                            max="10">
-                    </div>
-
-                    <button type="submit" id="comentario--boton" class="bbtn btn-dark mt-4 rounded">
-                        Guardar comentario
-                    </button>
-                </form>
-
-                <div class="container mb-4 mt-4">
-                    <div class="row" id="comments-container">
-
+            <div class="col">
+                <div class="jumbotron jumbotron-fluid" id="jumbo-Vestidos">
+                    <div class="container">
+                        <h1 class="display-4" id="title"></h1>
+                        <p id="description" class="lead"></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!--CARDS-->
+    <div class="container">
+        <div class="row" id="productos">
+        </div>
+    </div>
+
     <div class="separador"></div>
 
     <!--INICIO DEL FOOTER-->
@@ -135,13 +89,13 @@
             <div class="row">
                 <div class="col-sm-12 col-lg-2">
                     <br>
-                    <a href="FAQ.html" class="text-dark">
+                    <a href="FAQ.php" class="text-dark">
                         <p>Preguntas frecuentes</p>
                     </a>
                 </div>
                 <div class="col-sm-12 col-lg-2">
                     <br>
-                    <a href="info.html" class="text-dark">
+                    <a href="SobreNosotros.php" class="text-dark">
                         <p>Sobre Nosotros</p>
                     </a>
                 </div>
@@ -166,7 +120,7 @@
     </footer>
     <!-- Controller -->
     <script src="../controller/navBar.js"></script>
-    <script src="../controller/producto.js"></script>
+    <script src="../controller/productos.js"></script>
     <script src="../controller/components.js"></script>
     <!-- <script src="../../app/controllers/public/account.js"></script> -->
     <!-- Bootstrap -->
