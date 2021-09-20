@@ -48,12 +48,12 @@ const readCarrito = () => {
                     <div class="card mb-3" style="max-width: 100%;">
                         <div class="row no-gutters">
                             <div class="col-md-4">
-                                <img src="../../resources/imageFiles/dashboard/catalogo/${row.foto_producto}" alt="..." class="producto--img" >
+                                <img src="../resources/imageFiles/catalogo/${row.foto_producto}" alt="..." class="producto--img" >
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <div class="carta--contenedor__titulo">
-                                        <a href="Producto.php?id=${row.id_catalogo_producto}"><h5 class="card-title card--titulo">${row.catalogo_producto}</h5></a>
+                                        <a href="producto.html?id=${row.id_catalogo_producto}"><h5 class="card-title card--titulo">${row.catalogo_producto}</h5></a>
                                         <p>$${row.precio_venta}</p>
                                     </div>
                                     

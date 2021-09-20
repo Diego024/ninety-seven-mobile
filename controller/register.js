@@ -47,7 +47,7 @@ document.getElementById('register-form').addEventListener('submit', function (ev
             request.json().then(function (response) {
                 // Se comprueba si la respuesta es satisfactoria, de lo contrario se muestra un mensaje con la excepción.
                 if (response.status) {
-                    sweetAlert(1, response.message, 'signin.html');
+                    sweetAlert(1, response.message, 'login.html');
                 } else {
                     // Se verifica si el token falló (ya sea por tiempo o por uso).
                     if (response.recaptcha) {
