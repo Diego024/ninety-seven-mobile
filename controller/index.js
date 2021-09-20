@@ -23,11 +23,11 @@ function readAllNovedades() {
                         content += `
                         <div class="col mb-4">
                             <div class="card text-center" style="width: 20rem;">
-                                <a href="Producto.php?id=${row.id_catalogo_producto}">
-                                    <img src="../../resources/imageFiles/dashboard/catalogo/${row.foto_producto}" class="card-img-top" alt="...">
+                                <a href="producto.html?id=${row.id_catalogo_producto}">
+                                    <img src="../resources/imageFiles/catalogo/${row.foto_producto}" class="card-img-top" alt="...">
                                 </a>
                                 <div class="card-body">
-                                    <a href="Producto.php?id=${row.id_catalogo_producto}"><h5 class="card-title">${row.catalogo_producto}</h5></a>
+                                    <a href="producto.html?id=${row.id_catalogo_producto}"><h5 class="card-title">${row.catalogo_producto}</h5></a>
                                     <p class="card-text">${row.precio_venta}</p>
                                     ${/*<a href="#" class="btn btn-danger" id="btn_card">Añadir al carrito</a>*/' '}
                                 </div>
